@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Random password-generator</title>
+    <link rel="stylesheet" href="password-generator.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create an account</h1>
+      <p>Join our teams of professionals and earn well</p>
+      <div class="form">
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email-address" />
+        <div class="display">
+          <input type="password" id="password" placeholder="password" />
+          <div class="icons">
+            <img src="images/eye-close.png" id="eyeIcon" alt="close icon" />
+            <img
+              src="images/copy.png"
+              onclick="copyPassword()"
+              id="copyIcon"
+              alt="copy icon"
+            />
+          </div>
+        </div>
+      </div>
+
+      <p id="message" style="display: none">
+        This password is <span id="strength"></span>
+      </p>
+      <p id="instruction" style="display: none">
+        Password must contain an uppercase letter, lowercase letter, number, and
+        symbol.
+      </p>
+      <button class="generate-button" onclick="createPassword()">
+        <img src="images/generate.png" alt="button" />Generate a Password
+      </button>
+      <button class="create-button">Create Account</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
